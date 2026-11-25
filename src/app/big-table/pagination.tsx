@@ -19,8 +19,11 @@ export default function TablePagination() {
 
   function navigateToPage(pageNumber: number) {
     const offset = (pageNumber - 1) * pageSize;
+    const params = new URLSearchParams(searchParams);
+    params.set("count", String(pageSize));
+    params.set("offset", String(offset));
     startTransition(() => {
-      router.push(`/big-table?count=${pageSize}&offset=${offset}`);
+      router.push(`/big-table?${params.toString()}`);
     });
   }
 
