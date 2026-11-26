@@ -7,6 +7,7 @@ export default function HomePage() {
       <Link href="/big-table-infinite-scroll">
         Big Table with infinite scroll
       </Link>
+      <Link href="/ai-map">AI map chat</Link>
     </>
   );
 }
